@@ -1,4 +1,17 @@
-  <h1>Bienvenido a Sinatra!</h1>
+<h1>Bienvenido al Maratón Web</h1>
   <p>Este es un esqueleto de sinatra que armamos para ti</p>
 
-  
+<!-- Form which will lead to the sign up view -->
+<form method="post" action="/profile">
+	<p><input type="text" name="login" value="" placeholder="Username"></p>
+	<p><input type="password" name="password" value="" placeholder="Password"></p>
+	<p class="submit"><input type="submit" name="commit" value="Sign Up"></p>
+</form>
+
+<!-- Form which will lead to the +user profile+ view -->
+<form method="post" action="/profile">
+  <p class="submit"><input type="submit" name="commit" value="Login"></p>
+</form>
+
+
+<!-- NOTAS: QUIZA AMBOS SON IGUALES -->
