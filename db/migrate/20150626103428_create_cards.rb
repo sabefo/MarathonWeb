@@ -6,5 +6,6 @@ class CreateCards < ActiveRecord::Migration
 	    t.belongs_to :deck
 
 	    t.timestamps
+	  end
   end
 end

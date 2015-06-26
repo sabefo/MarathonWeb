@@ -4,5 +4,6 @@ class CreateDecks < ActiveRecord::Migration
 	    t.string :category
 
 	    t.timestamps
+	  end
   end
 end
