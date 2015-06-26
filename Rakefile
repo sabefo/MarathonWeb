@@ -123,6 +123,10 @@ task "console" do
   exec "irb -r./config/environment"
 end
 
+desc 'All db tasks in one funky task'
+task 'funky' => ["db:create", "db:migrate", "db:seed"]
+
+
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
 
