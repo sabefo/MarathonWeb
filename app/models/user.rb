@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+	has_many :rounds
+	has_many :decks, through: :rounds
 
   def self.authenticate(email, password)
 		return nil unless user = User.find_by(email: email)
