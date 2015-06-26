@@ -1,8 +1,17 @@
 <h1>Bienvenido al Maratón</h1>
 
 <!-- Missing logic if there are no more questions -->
-<p>+PREGUNTA+</p>
-<form method="post" action="/statistics">
-	<p><input type="text" name="login" value="" placeholder="answer"></p>
-	<p class="submit"><input type="submit" name="commit" value="next"></p>
+<p><%= @card[0].question%></p>
+<form method="post" action="/evaluate">
+	<p><input type="text" name="answer1" value="" placeholder="answer"></p>
+	<p><input type="hidden" name="deck" value="<%=@deck.id%>" placeholder="answer"></p>
+<p><%= @card[1].question%></p>
+	<p><input type="text" name="answer2" value="" placeholder="answer"></p>
+<p><%= @card[2].question%></p>
+	<p><input type="text" name="answer3" value="" placeholder="answer"></p>
+<p><%= @card[3].question%></p>
+	<p><input type="text" name="answer4" value="" placeholder="answer"></p>
+<p><%= @card[4].question%></p>
+	<p><input type="text" name="answer5" value="" placeholder="answer"></p>
+	<p class="submit"><input type="submit" name="answers" value="next"></p>
 </form>
