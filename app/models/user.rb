@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
 	has_many :rounds
 	has_many :decks, through: :rounds
 
@@ -14,3 +15,4 @@ class User < ActiveRecord::Base
 		  end
 		end
 end
+
