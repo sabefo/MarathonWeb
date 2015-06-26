@@ -1,8 +1,8 @@
-<h1>Bienvenido a tu perfil +USUARIO+</h1>
-
-<p>Tu nombre es +NOMBRE+</p><br>
-<p>Has jugado +TANTAS VECES+</p><br>
-<p>Tus estadísticas son +TANTAS VECES+</p><br>
+<h1>Bienvenido ¡<%= @user.name %>!</h1>
+<% if @user.games_played %>
+	<p>Has jugado <%= @user.games_played %> juegos</p><br>
+	<p>Tus estadísticas son +TANTAS VECES+</p><br>
+<% end %>
 
 <form method="get" action="/">
   <p class="submit"><input type="submit" name="commit" value="Log Out"></p>
