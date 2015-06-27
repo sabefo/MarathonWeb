@@ -1,9 +1,11 @@
-<h1>Bienvenido a tus estadísticas</h1>
+<h1>Estadísticas</h1>
 
-<p>Tu nombre es +NOMBRE+</p><br>
-<p>Has jugado +TANTAS VECES+</p><br>
-<p>Tus estadísticas son +TANTAS VECES+</p><br>
-
-<form method="post" action="/profile">
+<p>Tu nombre es <%= @user.name %></p><br>
+<p>Has jugado <%= @user.games_played %> juegos</p><br>
+<p>Tus estadísticas son: </p><br>
+<p>Tu porcentaje es: <%= @round.percentage %>%</p><br>
+<p>Fallaste <%= @round.mistakes %> preguntas</p><br>
+<p>Atinaste <%= @round.hits %> preguntas</p><br>
+<form method="get" action="/profile">
   <p class="submit"><input type="submit" name="commit" value="Back"></p>
 </form>
