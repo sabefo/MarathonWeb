@@ -1,24 +1,27 @@
 <h1>Bienvenido al Maratón Web</h1>
-  <p>Este es un esqueleto de sinatra que armamos para ti</p>
 
 <!-- Form which will lead to the sign up view -->
 
 <!-- Form which will lead to the +user profile+ view -->
+<div id = "error">
+<% if @error %>
+	<p>La contraseña o usuario son incorrectos, intenta de nuevo.</p>
+<% end %>
+</div>
+<div id = "login">
 <form method="post" action="/login">
 	<p><input type="text" name="username" placeholder="username"></p>
 	<p><input type="password" name="password" placeholder="password"></p>
   <p class="submit"><input type="submit" name="commit" value="Login"></p>
 </form>
-
+</div>
+<div id = "signin">
 <form method="post" action="/signup">
 	<p><input type="text" name="username" placeholder="username"></p>
 	<p><input type="password" name="password" placeholder="password"></p>
 	<p class="submit"><input type="submit" name="commit" value="Sign Up"></p>
 </form>
-
-<% if @error %>
-	<p>hubo un error</p>
-<% end %>
+</div>
 
 
 <!-- NOTAS: QUIZA AMBOS SON IGUALES -->

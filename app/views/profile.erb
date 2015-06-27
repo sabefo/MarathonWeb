@@ -3,15 +3,16 @@
 	<p>Has jugado <%= @user.games_played %> juegos</p><br>
 	<p>Tus estadísticas son +TANTAS VECES+</p><br>
 <% end %>
+<div class = "navbar">
+	<form method="get" action="/">
+	  <p class="submit"><input type="submit" name="commit" value="Log Out"></p>
+	</form>
 
-<form method="get" action="/">
-  <p class="submit"><input type="submit" name="commit" value="Log Out"></p>
-</form>
+	<form method="get" action="/game">
+	  <p class="submit"><input type="submit" name="commit" value="Game"></p>
+	</form>
 
-<form method="get" action="/game">
-  <p class="submit"><input type="submit" name="commit" value="Game"></p>
-</form>
-
-<form method="post" action="/statistics">
-  <p class="submit"><input type="submit" name="commit" value="statistics"></p>
-</form>
+	<form method="post" action="/statistics">
+	  <p class="submit"><input type="submit" name="commit" value="Statistics"></p>
+	</form>
+</div>
