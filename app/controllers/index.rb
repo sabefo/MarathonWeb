@@ -30,8 +30,10 @@ end
 post '/login' do
 	name = params[:username]
 	password = params[:password]
+	puts "entramos"
 
 	user = User.authenticate(name, password)
+	puts "el usuario es: #{user}"
 	if user
 		# erb :secret
 		session[:user] = user.id
